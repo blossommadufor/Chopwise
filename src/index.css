@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@layer base {
+     :root {
+        --bg-canvas: #f8f4ea;
+        --card-surface: #fffdf9;
+        --card-border: #ebe3d3;
+        --text-primary: #18233c;
+        --text-muted: #6b6557;
+        --terracotta: #c84523;
+        --terracotta-hover: #b33919;
+        --palm-gold: #d99020;
+        --adire-indigo: #18233c;
+    }
+    .dark {
+        --bg-canvas: #0b111e;
+        --card-surface: #141c2e;
+        --card-border: #232e47;
+        --text-primary: #f8f4ea;
+        --text-muted: #94a3b8;
+        --terracotta: #e25b37;
+        --terracotta-hover: #f06b47;
+        --palm-gold: #f59e0b;
+        --adire-indigo: #3b507d;
+    }
+    body {
+        font-family: "Space Grotesk", "Plus Jakarta Sans", system-ui, sans-serif;
+        background-color: var(--bg-canvas);
+        color: var(--text-primary);
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-tap-highlight-color: transparent;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+}
+
+
+/* Afro-Editorial Adire Subtle Weave */
+
+.adire-pattern {
+    background-image: radial-gradient(circle at 10px 10px, rgba(200, 69, 35, 0.07) 1.5px, transparent 1.5px), radial-gradient(circle at 30px 30px, rgba(24, 35, 60, 0.05) 1.5px, transparent 1.5px);
+    background-size: 40px 40px;
+}
+
+.dark .adire-pattern {
+    background-image: radial-gradient(circle at 10px 10px, rgba(226, 91, 55, 0.12) 1.5px, transparent 1.5px), radial-gradient(circle at 30px 30px, rgba(245, 158, 11, 0.08) 1.5px, transparent 1.5px);
+    background-size: 40px 40px;
+}
+
+
+/* Editorial badge styling */
+
+.editorial-badge {
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+
+/* Custom Afro-Editorial Scrollbar */
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d8cdb8;
+    border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #2a3754;
+}
